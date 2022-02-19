@@ -71,7 +71,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if(request.type === "youtube") {
-    fetch('https://ebuzzet.com/api/cyberAlly/model', {
+    fetch('http://localhost:5000/api/cyberAlly/model', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -112,7 +112,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 
   if(request.type === "typeAlert") {
-    fetch('https://ebuzzet.com/api/cyberAlly/model', {
+    fetch('http://localhost:5000/api/cyberAlly/model', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
