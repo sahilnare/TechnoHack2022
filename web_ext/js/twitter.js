@@ -1,5 +1,10 @@
 //document.querySelectorAll(".css-901oao.r-jwli3a.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0").forEach(item => console.log(item.innerText))
 
+//css-901oao r-18jsvk2 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0
+//css-901oao r-18jsvk2 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0
+//.css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-bnwqim.r-qvutc0
+
+
 var commentArray = {};
 var commentId = 0;
 var matched = false;
@@ -10,7 +15,7 @@ var totalTweetsLoaded = 3;
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if(request.status === 'loading') {
     totalTweetsLoaded = 5;
-    document.querySelectorAll('.css-901oao.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0').forEach((item, i) => {
+    document.querySelectorAll('.css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-bnwqim.r-qvutc0').forEach((item, i) => {
       item.classList.remove("exclude");
     });
   }
@@ -22,8 +27,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           matched = true;
       }
     }
-    if(matched) {document.querySelectorAll(".css-901oao.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0")
-      // console.log(commentArray[request.commentId].innerText);
+    if(matched) {document.querySelectorAll(".css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-bnwqim.r-qvutc0")
+      console.log(commentArray[request.commentId].innerText);
       commentArray[request.commentId].innerText = 'This comment is inappropriate.';
       commentArray[request.commentId].style.color = 'red';
     }
@@ -37,8 +42,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 // Scrap comments, tweets and send to background.js
 
 function sendCommentsToBackground() {
-  totalTweetsLoaded = document.querySelectorAll(".css-901oao.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0").length;
-  document.querySelectorAll(".css-901oao.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0:not(.exclude)").forEach(item => {
+  totalTweetsLoaded = document.querySelectorAll(".css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-bnwqim.r-qvutc0").length;
+  document.querySelectorAll(".css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-bnwqim.r-qvutc0:not(.exclude)").forEach(item => {
     commentId = "ID" + Math.round(Math.random()*10000);
     username = Array.from(item.parentElement.parentElement.parentElement.querySelectorAll('span')).filter(item => item.textContent.includes('@') && item.classList.contains('css-901oao'))[0].textContent;
     chrome.runtime.sendMessage({type: "twitter", comment: item.innerText, commentId: commentId, username: username});
@@ -49,7 +54,7 @@ function sendCommentsToBackground() {
 }
 
 function commentCheck() {
-  if(document.querySelectorAll(".css-901oao.r-1qd0xha.r-a023e6.r-16dba41.r-ad9z0x.r-bcqeeo.r-bnwqim.r-qvutc0").length <= totalTweetsLoaded) {
+  if(document.querySelectorAll(".css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-bnwqim.r-qvutc0").length <= totalTweetsLoaded) {
     console.log("Tweets loading...");
   } else {
     console.log("Tweets loaded");

@@ -92,8 +92,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       body: JSON.stringify({sentence: request.comment, website: 'twitter', email: 'meet@gmail.com', username: request.username})
     }).then(res => res.json()).then(res => {
       chrome.tabs.sendMessage(active_tab_id, {status: null, predictions: res.predictions, commentId: request.commentId});
-      // console.log(res, request.comment);
-    });
+      console.log(res, request.comment);
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   if(request.type === "instagram") {
