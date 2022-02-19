@@ -99,7 +99,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 
   if(request.type === "instagram") {
-    fetch('http://localhost:5000/api/cyberAlly/nsfw', {
+    fetch('http://localhost:5001/api/cyberAlly/nsfw', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
