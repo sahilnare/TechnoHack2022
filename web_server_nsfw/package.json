@@ -1,5 +1,5 @@
 {
-  "name": "sih2020server",
+  "name": "technohack2022",
   "version": "1.0.0",
   "description": "SIH 2020 web server",
   "main": "server.js",
@@ -10,18 +10,17 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "@tensorflow-models/toxicity": "^1.2.2",
-    "@tensorflow/tfjs": "^2.0.1",
-    "@tensorflow/tfjs-node": "^2.0.1",
-    "axios": "^0.19.2",
+    "@tensorflow/tfjs": "^3.13.0",
+    "@tensorflow/tfjs-core": "^3.13.0",
+    "@tensorflow/tfjs-node": "^3.13.0",
+    "axios": "^0.26.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "nlp-toolkit": "^0.2.6",
     "nodemon": "^2.0.4",
-    "nsfwjs": "^2.2.0",
-    "pg": "^8.2.1",
-    "tokenizers": "^0.7.0"
+    "nsfwjs": "^2.4.1",
+    "pg": "^8.2.1"
   }
 }

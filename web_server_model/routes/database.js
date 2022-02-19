@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const pool = require('../../db');
+const pool = require('../db');
 const nlp = require("nlp-toolkit")
 const fs = require('fs');
 const es = require('event-stream');

@@ -84,7 +84,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 
   if(request.type === "twitter") {
-    fetch('https://ebuzzet.com/api/cyberAlly/model', {
+    fetch('http://localhost:5000/api/cyberAlly/model', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 
   if(request.type === "instagram") {
-    fetch('https://ebuzzet.com/api/cyberAlly/nsfw', {
+    fetch('http://localhost:5000/api/cyberAlly/nsfw', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

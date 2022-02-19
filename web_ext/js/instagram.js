@@ -22,7 +22,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         if(item.probability > 0.8) {
           //console.log(request.result, imageArray[request.imageId]);
           var coverImg = document.createElement("IMG");
-          coverImg.setAttribute("src", "https://instagram.fbom5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/119775731_373355300498013_8508589766852102418_n.jpg?_nc_ht=instagram.fbom5-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=DynOQ752mdwAX-e-DS-&oh=fbcb955615c0947cbbf3e923a4ec5100&oe=5F8C2172");
+          coverImg.setAttribute("src", "https://instagram.fdel38-1.fna.fbcdn.net/v/t51.2885-15/e35/255564429_626815745344068_8627362944934482622_n.jpg?_nc_ht=instagram.fdel38-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=9N-kY2syo_MAX97909r&tn=Ffkc4WpoiCkiO8vl&edm=ALQROFkBAAAA&ccb=7-4&ig_cache_key=MjcwNjAxMDgxOTI4MjI4NTk3Mg%3D%3D.2-ccb7-4&oh=00_AT_hlGVPbkmJQx-PPKirJfyiIGfcmlLRxIApVyrP_Y4X_w&oe=621855DD&_nc_sid=30a2ef");
           coverImg.setAttribute('style', 'z-index:1000');
           coverImg.classList.add('FFVAD');
           imageArray[request.imageId].parentElement.appendChild(coverImg);
@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         if(item.probability > 0.6) {
           //console.log(request.result, imageArray[request.imageId]);
           var coverImg = document.createElement("IMG");
-          coverImg.setAttribute("src", "https://instagram.fbom5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/119775731_373355300498013_8508589766852102418_n.jpg?_nc_ht=instagram.fbom5-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=DynOQ752mdwAX-e-DS-&oh=fbcb955615c0947cbbf3e923a4ec5100&oe=5F8C2172");
+          coverImg.setAttribute("src", "https://instagram.fdel38-1.fna.fbcdn.net/v/t51.2885-15/e35/255564429_626815745344068_8627362944934482622_n.jpg?_nc_ht=instagram.fdel38-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=9N-kY2syo_MAX97909r&tn=Ffkc4WpoiCkiO8vl&edm=ALQROFkBAAAA&ccb=7-4&ig_cache_key=MjcwNjAxMDgxOTI4MjI4NTk3Mg%3D%3D.2-ccb7-4&oh=00_AT_hlGVPbkmJQx-PPKirJfyiIGfcmlLRxIApVyrP_Y4X_w&oe=621855DD&_nc_sid=30a2ef");
           coverImg.setAttribute('style', 'z-index:1000');
           coverImg.classList.add('FFVAD');
           imageArray[request.imageId].parentElement.appendChild(coverImg);

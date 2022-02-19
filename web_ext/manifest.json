@@ -1,5 +1,5 @@
 {
-  "name": "Rakshak",
+  "name": "Neo Protector",
   "description": "An extension that helps to prevent cyber bullying.",
   "version": "0.1.0",
   "manifest_version": 2,
@@ -12,7 +12,7 @@
   "options_page": "./html/options.html",
   "browser_action": {
     "default_popup": "./html/popup.html",
-    "default_title": "Rakshak Web Extension"
+    "default_title": "Neo Protector Web Extension"
   },
   "permissions": [
     "tabs",
