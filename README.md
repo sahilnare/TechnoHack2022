@@ -3,6 +3,10 @@ Project submission by Team That's What C Said
 # NeoProtector
 NeoProtector is an all-in-one integrated solution for prevention of cyber-crimes like cyber bullying/harassment, etc. We have built a web-extension which will automatically detect cyberbullying from social media platform, hide it from the users and report it to the respective authority. This will help in reducing the cyber-crime in India and will make Internet a safe place for everyone.
 
+## Demo Video Link
+
+https://drive.google.com/file/d/1wtuSr3xTpYsuWVRwk3OA9eKOt_2fjKdG/view?usp=sharing
+
 ## I) WEB EXTENSION
 
 ### Installation:
@@ -35,7 +39,4 @@ class : Porn , Hentai , Sexy , Neutral , drawing
 
 ![Pic 7](pics/youtube2.png)
 
-## Demo Video Link
-
-https://drive.google.com/file/d/1wtuSr3xTpYsuWVRwk3OA9eKOt_2fjKdG/view?usp=sharing
 
