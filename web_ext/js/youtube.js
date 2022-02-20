@@ -65,14 +65,18 @@ function sendCommentsToBackground() {
   }
 
   totalCommentsLoaded = document.querySelectorAll('#content-text').length;
-  document.querySelectorAll('#content-text:not(.exclude)').forEach((item, i) => {
-    commentId = "ID" + Math.round(Math.random()*10000);
-    username = item.parentElement.parentElement.parentElement.querySelector('#header').querySelector('#author-text').querySelector('span').textContent.trim();
-    chrome.runtime.sendMessage({type: "youtube", comment: item.innerText, commentId: commentId, username: username});
-    commentArray[commentId] = item;
-    item.classList.add("exclude");
-    // console.log(item.innerText);
-  });
+
+  if (totalCommentsLoaded > 0) {
+    document.querySelectorAll('#content-text:not(.exclude)').forEach((item, i) => {
+      commentId = "ID" + Math.round(Math.random()*10000);
+      username = item.parentElement.parentElement.parentElement.querySelector('#header').querySelector('#author-text').querySelector('span').textContent.trim();
+      chrome.runtime.sendMessage({type: "youtube", comment: item.innerText, commentId: commentId, username: username});
+      commentArray[commentId] = item;
+      item.classList.add("exclude");
+      // console.log(item.innerText);
+    });
+  }
+  
   commentCheckTimer();
 }
 
